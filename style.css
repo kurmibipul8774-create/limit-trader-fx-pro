@@ -8,75 +8,75 @@ font-family:'Poppins',sans-serif;
 body{
 background:#0f172a;
 color:#fff;
-padding:20px;
+padding:14px;
 }
 
 header{
 text-align:center;
-margin-bottom:30px;
+margin-bottom:22px;
 }
 
 header h1{
-font-size:28px;
+font-size:24px;
 font-weight:700;
 color:#00ff88;
 }
 
 header p{
-margin-top:8px;
-font-size:18px;
+font-size:15px;
 color:#94a3b8;
+margin-top:6px;
 }
 
 .dashboard{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:16px;
-margin:30px 0;
+gap:12px;
+margin:22px 0;
 }
 
 .card{
 background:#1e293b;
 border:2px solid #00ff88;
-border-radius:20px;
-padding:18px;
+border-radius:16px;
+padding:14px;
 text-align:center;
-box-shadow:0 10px 25px rgba(0,255,136,.15);
+box-shadow:0 6px 18px rgba(0,255,136,.12);
 transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-4px);
-box-shadow:0 0 25px rgba(0,255,136,.35);
+transform:translateY(-3px);
+box-shadow:0 0 18px rgba(0,255,136,.25);
 }
 
 .card h2{
-font-size:15px;
+font-size:13px;
 color:#cbd5e1;
-margin-bottom:10px;
+margin-bottom:8px;
 font-weight:600;
 }
 
 .card h1{
-font-size:30px;
+font-size:24px;
 color:#00ff88;
 font-weight:700;
 }
 
 .menu{
-margin-top:25px;
+margin-top:20px;
 }
 
 .menu button,
 button{
 width:100%;
-padding:16px;
-margin-top:18px;
+padding:14px;
+margin-top:14px;
 border:none;
-border-radius:18px;
+border-radius:14px;
 background:#00ff88;
 color:#0f172a;
-font-size:18px;
+font-size:16px;
 font-weight:700;
 cursor:pointer;
 transition:.3s;
@@ -90,27 +90,28 @@ input,
 select,
 textarea{
 width:100%;
-padding:15px;
-margin-top:8px;
-margin-bottom:18px;
+padding:12px;
+margin-top:6px;
+margin-bottom:16px;
 border:2px solid #00ff88;
-border-radius:15px;
+border-radius:12px;
 background:#1e293b;
 color:#fff;
-font-size:16px;
+font-size:14px;
 outline:none;
 }
 
 input:focus,
 select:focus,
 textarea:focus{
-box-shadow:0 0 12px rgba(0,255,136,.4);
+box-shadow:0 0 12px rgba(0,255,136,.35);
 }
 
 label{
 display:block;
-margin-top:12px;
-margin-bottom:6px;
+margin-top:10px;
+margin-bottom:5px;
+font-size:14px;
 font-weight:600;
 }
 
@@ -120,49 +121,56 @@ text-decoration:none;
 
 #history .card{
 text-align:left;
-margin-bottom:18px;
+margin-bottom:14px;
 }
 
 #history h2{
-font-size:24px;
-margin-bottom:20px;
 text-align:center;
+font-size:22px;
 color:#00ff88;
+margin-bottom:18px;
 }
 
 @media(max-width:600px){
 
 body{
-padding:16px;
+padding:12px;
 }
 
 header h1{
-font-size:24px;
+font-size:22px;
 }
 
 header p{
-font-size:16px;
-}
-
-.dashboard{
-gap:14px;
-}
-
-.card{
-padding:16px;
-}
-
-.card h2{
 font-size:14px;
 }
 
+.dashboard{
+gap:10px;
+}
+
+.card{
+padding:12px;
+}
+
+.card h2{
+font-size:12px;
+}
+
 .card h1{
-font-size:26px;
+font-size:22px;
 }
 
 button{
-font-size:17px;
-padding:15px;
+padding:13px;
+font-size:15px;
+}
+
+input,
+select,
+textarea{
+font-size:14px;
+padding:11px;
 }
 
 }
