@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Trade</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>➕ Add Trade</h1>
+<p>Record your trading setup</p>
+</header>
+
+<div class="card">
+
+<label>Pair</label>
+<input type="text" id="pair" placeholder="XAUUSD">
+
+<label>Date</label>
+<input type="date" id="date">
+
+<label>Session</label>
+<select id="session">
+<option>Asia</option>
+<option>London</option>
+<option>New York</option>
+</select>
+
+<label>Bias</label>
+<select id="bias">
+<option>Bullish</option>
+<option>Bearish</option>
+</select>
+
+<label>Setup Type</label>
+<select id="setupType">
+<option>Liquidity Sweep</option>
+<option>CHOCH</option>
+<option>Order Block</option>
+<option>Breaker</option>
+<option>FVG</option>
+</select>
+
+<label>Risk %</label>
+<input type="number" id="risk" placeholder="1">
+
+<label>R:R</label>
+<input type="text" id="rr" placeholder="1:3">
+
+<label>Result</label>
+<select id="result">
+<option>Win</option>
+<option>Loss</option>
+<option>Break Even</option>
+</select>
+
+<label>Profit ($)</label>
+<input type="number" id="profit" placeholder="100">
+
+<label>A+ Setup</label>
+<select id="aplus">
+<option>Yes</option>
+<option>No</option>
+</select>
+
+<label>Notes</label>
+<textarea id="notes" rows="5"></textarea>
+
+<button id="saveTrade">💾 Save Trade</button>
+
+</div>
+
+<a href="index.html">
+<button>⬅ Back</button>
+</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
