@@ -2,74 +2,88 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
 background:#0f172a;
-color:white;
+color:#fff;
 padding:20px;
 }
 
 header{
 text-align:center;
-margin-bottom:25px;
+margin-bottom:30px;
 }
 
 header h1{
-font-size:34px;
+font-size:28px;
+font-weight:700;
 color:#00ff88;
 }
 
 header p{
-color:#9ca3af;
 margin-top:8px;
+font-size:18px;
+color:#94a3b8;
 }
 
 .dashboard{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:15px;
-margin-bottom:25px;
+gap:16px;
+margin:30px 0;
 }
 
 .card{
 background:#1e293b;
 border:2px solid #00ff88;
-border-radius:18px;
-padding:20px;
+border-radius:20px;
+padding:18px;
 text-align:center;
-box-shadow:0 0 20px rgba(0,255,136,.15);
+box-shadow:0 10px 25px rgba(0,255,136,.15);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 0 25px rgba(0,255,136,.35);
 }
 
 .card h2{
-font-size:18px;
+font-size:15px;
 color:#cbd5e1;
 margin-bottom:10px;
+font-weight:600;
 }
 
 .card h1{
-font-size:36px;
+font-size:30px;
 color:#00ff88;
+font-weight:700;
+}
+
+.menu{
+margin-top:25px;
 }
 
 .menu button,
 button{
 width:100%;
-padding:18px;
-margin-top:15px;
+padding:16px;
+margin-top:18px;
 border:none;
-border-radius:15px;
+border-radius:18px;
 background:#00ff88;
 color:#0f172a;
-font-size:22px;
-font-weight:bold;
+font-size:18px;
+font-weight:700;
 cursor:pointer;
 transition:.3s;
 }
 
 button:hover{
-transform:scale(1.03);
+transform:scale(1.02);
 }
 
 input,
@@ -80,17 +94,24 @@ padding:15px;
 margin-top:8px;
 margin-bottom:18px;
 border:2px solid #00ff88;
-border-radius:12px;
+border-radius:15px;
 background:#1e293b;
-color:white;
+color:#fff;
 font-size:16px;
+outline:none;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+box-shadow:0 0 12px rgba(0,255,136,.4);
 }
 
 label{
-font-weight:bold;
 display:block;
-margin-top:10px;
-margin-bottom:5px;
+margin-top:12px;
+margin-bottom:6px;
+font-weight:600;
 }
 
 a{
@@ -98,6 +119,50 @@ text-decoration:none;
 }
 
 #history .card{
-margin-bottom:15px;
 text-align:left;
+margin-bottom:18px;
+}
+
+#history h2{
+font-size:24px;
+margin-bottom:20px;
+text-align:center;
+color:#00ff88;
+}
+
+@media(max-width:600px){
+
+body{
+padding:16px;
+}
+
+header h1{
+font-size:24px;
+}
+
+header p{
+font-size:16px;
+}
+
+.dashboard{
+gap:14px;
+}
+
+.card{
+padding:16px;
+}
+
+.card h2{
+font-size:14px;
+}
+
+.card h1{
+font-size:26px;
+}
+
+button{
+font-size:17px;
+padding:15px;
+}
+
 }
