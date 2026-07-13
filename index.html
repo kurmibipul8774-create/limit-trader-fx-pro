@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,106 +7,115 @@
 <title>Limit Trader FX Pro</title>
 
 <link rel="stylesheet" href="style.css">
-
-<!-- PWA -->
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#00ff88">
-<link rel="icon" href="icon-192.png">
+<meta name="theme-color" content="#0f172a">
 </head>
 
 <body>
 
-<header>
-<h1>🚀 Limit Trader FX Pro</h1>
-<p>Professional Trading Journal</p>
-</header>
+<div class="app">
 
-<div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
 
-<div class="card">
-<h2>Total Trades</h2>
-<h1 id="totalTrades">0</h1>
-</div>
+        <div class="logo">
+            🚀
+            <h2>Limit Trader FX</h2>
+            <p>Professional Journal</p>
+        </div>
 
-<div class="card">
-<h2>Win Rate</h2>
-<h1 id="winRate">0%</h1>
-</div>
+        <nav>
 
-<div class="card">
-<h2>Total Profit</h2>
-<h1 id="totalProfit">$0</h1>
-</div>
+            <a href="index.html" class="active">
+                📊 Dashboard
+            </a>
 
-<div class="card">
-<h2>Average R:R</h2>
-<h1 id="averageRR">0</h1>
-</div>
+            <a href="history.html">
+                📋 Trade Log
+            </a>
 
-<div class="card">
-<h2>A+ Setups</h2>
-<h1 id="aPlus">0</h1>
-</div>
+            <a href="#">
+                📈 Analytics
+            </a>
 
-<div class="card">
-<h2>Profit Factor</h2>
-<h1 id="profitFactor">0</h1>
-</div>
+            <a href="#">
+                📅 Calendar
+            </a>
 
-</div>
+            <a href="#">
+                🧠 Psychology
+            </a>
 
-<div class="menu">
+            <a href="#">
+                📜 Rules
+            </a>
 
-<a href="add-trade.html">
-<button>➕ Add Trade</button>
-</a>
+            <a href="#">
+                ⚙ Settings
+            </a>
 
-<a href="history.html">
-<button>📋 Trade History</button>
-</a>
+        </nav>
 
-<button id="installButton" style="display:none;">
-📲 Install App
-</button>
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="content">
+
+        <h1>Dashboard</h1>
+        <p>Welcome back, Trader.</p>
+
+        <div class="dashboard">
+
+            <div class="card">
+                <h3>Total Trades</h3>
+                <h1 id="totalTrades">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Win Rate</h3>
+                <h1 id="winRate">0%</h1>
+            </div>
+
+            <div class="card">
+                <h3>Total Profit</h3>
+                <h1 id="totalProfit">$0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Average R:R</h3>
+                <h1 id="averageRR">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>A+ Setups</h3>
+                <h1 id="aPlus">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Profit Factor</h3>
+                <h1 id="profitFactor">0</h1>
+            </div>
+
+        </div>
+
+        <div class="buttons">
+
+            <a href="add-trade.html">
+                <button>➕ Add Trade</button>
+            </a>
+
+            <a href="history.html">
+                <button>📋 Trade History</button>
+            </a>
+
+        </div>
+
+    </main>
 
 </div>
 
 <script src="script.js"></script>
-
-<script>
-if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-        navigator.serviceWorker.register("./sw.js");
-    });
-}
-
-let deferredPrompt;
-
-window.addEventListener("beforeinstallprompt", (e) => {
-    e.preventDefault();
-
-    deferredPrompt = e;
-
-    const installBtn = document.getElementById("installButton");
-
-    installBtn.style.display = "block";
-
-    installBtn.addEventListener("click", async () => {
-
-        deferredPrompt.prompt();
-
-        const { outcome } = await deferredPrompt.userChoice;
-
-        if (outcome === "accepted") {
-            installBtn.style.display = "none";
-        }
-
-        deferredPrompt = null;
-
-    });
-
-});
-</script>
 
 </body>
 </html>
